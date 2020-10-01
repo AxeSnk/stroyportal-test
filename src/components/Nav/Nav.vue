@@ -2,7 +2,12 @@
   <nav class="nav">
     <ul class="nav__list">
       <li v-for="item in list" :key="item.title" class="nav__item">
-        <a class="nav__item-link" :href="item.href">{{item.title}}</a>
+        <a
+          class="nav__item-link"
+          v-bind:class="{ 'nav__item-link_expanded': item.expanded }"
+          :href="item.href"
+          >{{ item.title }}</a
+        >
       </li>
     </ul>
   </nav>
@@ -14,7 +19,11 @@ export default {
     list: [
       { title: 'Тендеры', href: '/mock-address/change-me' },
       { title: 'База подрядчиков', href: '/mock-address/change-me' },
-      { title: 'Другие сервисы', href: '/mock-address/change-me' }
+      {
+        title: 'Другие сервисы',
+        href: '/mock-address/change-me',
+        expanded: true,
+      },
     ],
   }),
 };

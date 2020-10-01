@@ -1,6 +1,6 @@
 <template>
   <div class="bar">
-    <div class="bar__region"></div>
+    <div class="bar__region">bar__region</div>
     <div class="bar__nav">
       <Nav />
     </div>

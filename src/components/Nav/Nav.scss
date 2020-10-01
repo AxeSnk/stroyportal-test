@@ -1,0 +1,16 @@
+.nav {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 12px;
+
+    &-link {
+      &_expanded::after {
+        content: ""
+      }
+    }
+  }
+}

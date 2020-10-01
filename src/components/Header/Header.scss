@@ -1,3 +1,9 @@
+@import '@/assets/styles/styles.scss';
+
 .header {
-  font-size: 40px;
+
+  &__bar {
+    padding: 0 85px;
+    background-color: $bar;
+  }
 }

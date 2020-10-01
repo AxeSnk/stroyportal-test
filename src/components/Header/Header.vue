@@ -3,6 +3,9 @@
     <div class="header__bar">
       <Bar />
     </div>
+    <div class="header__main">
+      
+    </div>
   </header>
 </template>
 

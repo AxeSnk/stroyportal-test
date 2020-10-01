@@ -1,0 +1,11 @@
+@import '@/assets/styles/styles.scss';
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: $hint;
+  padding: 6px 0;
+}
