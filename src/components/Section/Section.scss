@@ -2,4 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media(max-width: 1020px) {
+    flex-direction: column;
+  }
+
+  &__logo,
+  &__catalog,
+  &__search,
+  &__list,
+  &__login {
+    @media(max-width: 1020px) {
+      padding: 10px 0;
+    }
+  }
 }

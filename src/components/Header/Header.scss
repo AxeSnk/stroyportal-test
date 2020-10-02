@@ -5,6 +5,16 @@
   &__bar {
     padding: 6px 85px;
     background-color: $rear;
+
+    @media(max-width: 450px) {
+      padding: 6px 20px;
+    }
+
+    @media(min-width: 1281px) {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
   }
 
   &__main {
@@ -12,5 +22,15 @@
     background-color: #fff;
     border-top: 1px solid $primary;
     border-bottom: 1px solid $primary;
+
+    @media(max-width: 450px) {
+      padding: 11px 0;
+    }
+
+    @media(min-width: 1281px) {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
   }
 }

@@ -1,12 +1,12 @@
 <template>
   <nav class="nav">
-    <ul class="nav__list">
-      <li
-        v-for="item in list"
-        :key="item.title"
-        v-bind:class="{ 'js-nav__item': item.expanded }"
-        class="nav__item"
-      >
+    <div
+      class="nav__burger"
+      @click="toggleNav()"
+      v-click-outside="onClickOutside"
+    ></div>
+    <ul class="nav__list" v-bind:class="{ nav__list_active: active }">
+      <li v-for="item in list" :key="item.title" class="nav__item">
         <a class="nav__item-link" :href="item.href">{{ item.title }}</a>
         <span v-if="item.expanded" class="nav__item-arrow"></span>
       </li>
@@ -26,7 +26,19 @@ export default {
         expanded: true,
       },
     ],
+    active: false,
   }),
+  methods: {
+    toggleNav() {
+      this.active = !this.active;
+    },
+    hideNav() {
+      this.active = false;
+    },
+    onClickOutside() {
+      this.hideNav();
+    },
+  },
 };
 </script>
 

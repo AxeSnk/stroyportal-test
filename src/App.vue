@@ -26,6 +26,8 @@ body {
 .wrapper {
   font-family: "open-sans";
   font-size: 14px;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ul {

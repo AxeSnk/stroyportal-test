@@ -1,7 +1,34 @@
 .nav {
 
+  &__burger {
+    display: none;
+
+    @media(max-width: 680px) {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("../../assets/img/menu.png") no-repeat center;  
+    }
+
+  }
+
   &__list {
     display: flex;
+    position: relative;
+
+    @media(max-width: 680px) {
+      display: none;
+
+      &_active {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: 4px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  
   }
 
   &__item {
@@ -10,6 +37,11 @@
     align-items: center;
     margin-left: 24px;
     cursor: pointer;
+
+    @media(max-width: 680px) {
+      padding: 10px 20px;
+      margin-left: 0;
+    }
 
     &-arrow {
       display: block;

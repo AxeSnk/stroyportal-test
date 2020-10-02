@@ -7,6 +7,7 @@
       autocomplete="off"
       v-model="name"
       @focus="modal = true"
+      v-click-outside="onClickOutside"
     />
     <div class="search__list" v-if="filteredNames && modal">
       <ul>
@@ -51,6 +52,10 @@ export default {
       this.name = name;
       this.modal = false;
     },
+    onClickOutside(event) {
+      const isItem = event.changedTouches[0].target.classList[0] == 'search__item'
+      isItem ? null: this.modal = false;
+    }
   },
   watch: {
     name() {
