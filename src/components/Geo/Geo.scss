@@ -1,0 +1,15 @@
+.geolocation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__icon {
+    display: block;
+    width: 14px;
+    height: 16px;
+    background: url("../../assets/img/location.png") no-repeat center;
+    margin-right: 8px;
+  }
+
+}

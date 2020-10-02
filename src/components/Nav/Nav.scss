@@ -5,12 +5,18 @@
   }
 
   &__item {
-    margin: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 24px;
+    cursor: pointer;
 
-    &-link {
-      &_expanded::after {
-        content: ""
-      }
+    &-arrow {
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/img/arrow.png") no-repeat center;
+      margin-left: 4px;
     }
   }
 }

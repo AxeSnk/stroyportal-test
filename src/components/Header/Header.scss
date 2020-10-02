@@ -3,7 +3,14 @@
 .header {
 
   &__bar {
-    padding: 0 85px;
-    background-color: $bar;
+    padding: 6px 85px;
+    background-color: $rear;
+  }
+
+  &__main {
+    padding: 11px 85px;
+    background-color: #fff;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
   }
 }

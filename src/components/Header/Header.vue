@@ -4,18 +4,20 @@
       <Bar />
     </div>
     <div class="header__main">
-      
+      <Section />
     </div>
   </header>
 </template>
 
 <script>
 import Bar from '../Bar/Bar';
+import Section from '../Section/Section';
 
 export default {
   name: 'Header',
   components: {
-    Bar
+    Bar,
+    Section
   },
 };
 </script>

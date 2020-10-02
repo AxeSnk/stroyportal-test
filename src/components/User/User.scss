@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #9B51E0;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+
+  &__name {
+    line-height: 24px;
+    color: #fff;  
+  }
+}

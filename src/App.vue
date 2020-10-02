@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
 
 export default {
   name: 'App',
@@ -25,6 +25,7 @@ body {
 
 .wrapper {
   font-family: "open-sans";
+  font-size: 14px;
 }
 
 ul {
@@ -40,5 +41,16 @@ li {
 a {
   text-decoration: none;
   color: $hint
+}
+
+button {
+  padding: 0;
+  border-style: none;
+}
+
+input {
+  border: none;
+  padding: 0;
+  outline: none;
 }
 </style>

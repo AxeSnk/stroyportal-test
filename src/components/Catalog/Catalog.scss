@@ -1,0 +1,21 @@
+.catalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 24px;
+  background: #FED83D;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: "open-sans";
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/img/menu.png") no-repeat center;
+    margin-right: 8px;
+  }
+}
