@@ -7,6 +7,11 @@
     flex-direction: column;
   }
 
+  @media(min-width: 1281px) {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
   &__logo,
   &__catalog,
   &__search,

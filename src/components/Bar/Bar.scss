@@ -7,4 +7,10 @@
   font-size: 12px;
   line-height: 20px;
   color: $hint;
+
+  @media(min-width: 1281px) {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
 }
