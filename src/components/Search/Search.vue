@@ -7,7 +7,7 @@
       autocomplete="off"
       v-model="name"
       @focus="modal = true"
-      v-click-outside="onClickOutside"
+      v-click-outside="hide"
     />
     <div class="search__list" v-if="filteredNames && modal">
       <ul>
@@ -26,14 +26,14 @@
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside';
+import ClickOutside from "vue-click-outside";
 
 export default {
-  data: function() {
+  data: function () {
     return {
-      name: '',
+      name: "",
       modal: false,
-      names: ['Alexander', 'Fiona', 'Marina', 'Shrek'],
+      names: ["Alexander", "Fiona", "Marina", "Shrek"],
       filteredNames: [],
     };
   },
@@ -41,12 +41,12 @@ export default {
     this.filterNames();
   },
   directives: {
-    ClickOutside
+    ClickOutside,
   },
   methods: {
     filterNames() {
-      if(this.name.length == 0) {
-        this.filteredNames = this.names
+      if (this.name.length == 0) {
+        this.filteredNames = this.names;
       }
 
       this.filteredNames = this.names.filter((name) => {
@@ -57,19 +57,18 @@ export default {
       this.name = name;
       this.modal = false;
     },
-    onClickOutside(event) {
-      const isItem = event.changedTouches[0].target.classList[0] == 'search__item'
-      isItem ? null: this.modal = false;
-    }
+    hide() {
+      this.modal = false;
+    },
   },
   watch: {
     name() {
       this.filterNames();
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import 'Search';
+@import "Search";
 </style>

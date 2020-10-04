@@ -3,7 +3,7 @@
     <div
       class="nav__burger"
       @click="toggleNav()"
-      v-click-outside="onClickOutside"
+      v-click-outside="hideNav"
     ></div>
     <ul class="nav__list" v-bind:class="{ nav__list_active: active }">
       <li v-for="item in list" :key="item.title" class="nav__item">
@@ -37,14 +37,9 @@ export default {
     toggleNav() {
       this.active = !this.active;
     },
-    onClickOutside(event) {
-      const targetClass = event.changedTouches[0].target.classList[0];
-      const isItem = targetClass == 'nav__item';
-      const isLink = targetClass == 'nav__item-link';
-      const isArrow = targetClass == 'nav__item-arrow';
-      
-      (isItem || isLink || isArrow) ? null : (this.active = false);
-    },
+    hideNav() {
+      this.active = false
+    }
   },
 };
 </script>
