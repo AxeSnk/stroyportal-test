@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import ClickOutside from 'vue-click-outside';
+
 export default {
   data: function() {
     return {
@@ -37,6 +39,9 @@ export default {
   },
   mounted() {
     this.filterNames();
+  },
+  directives: {
+    ClickOutside
   },
   methods: {
     filterNames() {

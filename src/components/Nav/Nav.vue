@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import ClickOutside from 'vue-click-outside';
+
 export default {
   data: () => ({
     list: [
@@ -28,15 +30,20 @@ export default {
     ],
     active: false,
   }),
+  directives: {
+    ClickOutside,
+  },
   methods: {
     toggleNav() {
       this.active = !this.active;
     },
-    hideNav() {
-      this.active = false;
-    },
-    onClickOutside() {
-      this.hideNav();
+    onClickOutside(event) {
+      const targetClass = event.changedTouches[0].target.classList[0];
+      const isItem = targetClass == 'nav__item';
+      const isLink = targetClass == 'nav__item-link';
+      const isArrow = targetClass == 'nav__item-arrow';
+      
+      (isItem || isLink || isArrow) ? null : (this.active = false);
     },
   },
 };
